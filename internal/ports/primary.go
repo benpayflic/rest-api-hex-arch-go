@@ -1,6 +1,6 @@
 package ports
 
-// Driven ports
+// Driving ports
 
 // APIPort is the technology neutral
 // port for driving adapters
