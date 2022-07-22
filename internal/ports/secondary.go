@@ -1,3 +1,3 @@
 package ports
 
-// Driving ports
+// Driven ports
