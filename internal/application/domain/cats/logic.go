@@ -2,22 +2,15 @@ package cats
 
 import "github.com/benpayflic/rest-api-hex-arch-go/pkg/utils"
 
-type Cat struct {
-	Name  string
-	Breed string
-	DOB   string
+type CatService struct {
 }
 
-func NewCat(name string, breed string, dob string) *Cat {
-	return &Cat{
-		Name:  name,
-		Breed: breed,
-		DOB:   dob,
-	}
+func NewCatService() *CatService {
+	return &CatService{}
 }
 
 // Calculate the age of the cat in human years
-func (c *Cat) HumanYears() int64 {
+func (CatService) CalculateHumanYears(c *Cat) {
 	age := utils.Age(c.DOB)
 	var humanYears int64
 
@@ -30,5 +23,5 @@ func (c *Cat) HumanYears() int64 {
 		age = age / 3
 		humanYears = int64(age + 1)
 	}
-	return humanYears
+	c.HumanYears = humanYears
 }
