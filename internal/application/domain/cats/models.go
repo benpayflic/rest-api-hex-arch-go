@@ -7,6 +7,7 @@ type Cat struct {
 	Breed      string `json:"breed,omitempty"`
 	DOB        string `json:"dob,omitempty"`
 	HumanYears int64  `json:"humanYears,omitempty"`
+	CatFact    string `json:"fact,omitempty"`
 }
 
 func UnmarshalCat(data []byte) (Cat, error) {

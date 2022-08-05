@@ -9,6 +9,7 @@ import (
 type Config struct {
 	AppPort string `mapstructure:"APP_PORT"`
 	AppHost string `mapstructure:"APP_HOST"`
+	DbPath  string `mapstructure:"DB_PATH"`
 }
 
 // Load configurations from path and unmarshal to Config

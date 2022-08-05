@@ -17,10 +17,9 @@ func responseManagerMiddleware(next http.Handler) http.Handler {
 func loggingMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		log.Printf(
-			"%s\t%s\t%v",
+			"%s\t%s",
 			r.Method,
 			r.RequestURI,
-			r.Response.Status, // TODO: Add response status code. Throws error
 		)
 		next.ServeHTTP(w, r)
 	})
