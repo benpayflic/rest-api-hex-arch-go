@@ -22,6 +22,9 @@ func NewAdapter(api ports.APIPort, config *config.Config) *Adapter {
 func registerHandlers(restAdapter Adapter, r *mux.Router) {
 
 	r.HandleFunc("/api/v1/cats", createCatHandler(restAdapter)).Methods("POST")
+	r.HandleFunc("/api/v1/cats/{catName}", getCatHandler(restAdapter)).Methods("GET")
+	r.HandleFunc("/api/v1/cats", updateCatHandler(restAdapter)).Methods("PUT")
+	r.HandleFunc("/api/v1/cats/{catName}", deleteCatHandler(restAdapter)).Methods("DELETE")
 }
 
 func (restAdapter Adapter) Start() {
