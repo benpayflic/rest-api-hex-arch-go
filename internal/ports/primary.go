@@ -8,4 +8,7 @@ import "github.com/benpayflic/rest-api-hex-arch-go/internal/application/domain/c
 // port for driving adapters
 type APIPort interface {
 	CreateCat(c *cats.Cat) error
+	RetrieveCat(string) (*cats.Cat, error)
+	UpdateCat(*cats.Cat) error
+	DeleteCat(string) error
 }

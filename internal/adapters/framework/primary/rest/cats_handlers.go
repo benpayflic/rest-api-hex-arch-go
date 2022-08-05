@@ -9,6 +9,8 @@ import (
 	"github.com/benpayflic/rest-api-hex-arch-go/internal/application/domain/cats"
 )
 
+// TODO: Implement other crud operations
+
 func createCatHandler(restAdapter Adapter) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 
